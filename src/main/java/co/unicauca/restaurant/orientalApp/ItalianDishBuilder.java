@@ -31,7 +31,7 @@ public class ItalianDishBuilder extends DishBuilder{
     @Override
     public DishBuilder init() {
       myRepository = new ProductRepositoryImplArrays();
-      myDish = new OrientalDish(0.0);
+      myDish = new ItalianDish(0.0);
       myItalianDish = (ItalianDish) myDish;
       //Obtenemos todos los productos
       allProducts = myRepository.findAll();
@@ -39,9 +39,10 @@ public class ItalianDishBuilder extends DishBuilder{
       bases = new ArrayList<Product>();
       options = new ArrayList<Product>();
       for(Product each: allProducts){
-          if(each.getId()<4)
+          if(each.getId()>6 && each.getId()<10 )
               bases.add(each);
           else
+              if(each.getId()>9 && each.getId()<13)
               options.add(each);
       }
       return this ;

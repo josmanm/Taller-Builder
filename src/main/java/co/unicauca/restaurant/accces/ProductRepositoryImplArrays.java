@@ -27,10 +27,15 @@ public class ProductRepositoryImplArrays implements IProductRepository {
         products.add(new Product(1, "Shop Suey", 5000d));
         products.add(new Product(2, "Arroz Oriental", 5500d));
         products.add(new Product(3, "Pasta con Verduras", 5000d));
-         products.add(new Product(4, "Pollo Agridulce", 5800d));
+        products.add(new Product(4, "Pollo Agridulce", 5800d));
         products.add(new Product(5, "Cerdo Tropical", 6900d));
         products.add(new Product(6, "Res Teriyaki", 6200d));
-        
+        products.add(new  Product(7,"Pasta Carbonara",6000d));
+        products.add(new  Product(8,"Pizza Margherita",8000d));
+        products.add(new  Product(9,"Risotto de hongos",7500d));
+        products.add(new  Product(10,"Pomodoro E Basilico",7800d));
+        products.add(new  Product(11,"Pistacho Panna Cotta",6000d));
+        products.add(new  Product(12," Panettone",4000d));
     }
     
     @Override

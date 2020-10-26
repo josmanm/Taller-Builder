@@ -16,6 +16,8 @@ public class DishDirector {
   public DishDirector(DishBuilder builder) {
     this.builder = builder;
   }
+  public DishDirector(){
+  }
 
   public Dish getDish() {
     return builder.getDish();

@@ -65,7 +65,9 @@ public class OrientalDishBuilder extends DishBuilder {
           if(each.getId()<4)
               bases.add(each);
           else
-              options.add(each);
+              if(each.getId()<7){
+                options.add(each);
+              }
       }
       return this ;
     }
