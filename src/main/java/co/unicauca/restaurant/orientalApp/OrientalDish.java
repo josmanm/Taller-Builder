@@ -17,16 +17,19 @@ public class OrientalDish extends Dish{
     private List<Product> myOptions;
     private Size size;
 
+    public OrientalDish() {
+    }
+
     OrientalDish(double p) {
         this.price = p;
         myOptions = new Vector<>();
     }
 
-    void setBase(Product base) {
+    public void setBase(Product base) {
         this.base = base; 
     }
 
-    void addOption(Product option) {
+    public void addOption(Product option) {
         getMyOptions().add(option);
     }
 
