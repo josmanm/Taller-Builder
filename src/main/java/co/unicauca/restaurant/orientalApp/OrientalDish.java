@@ -7,13 +7,13 @@ import java.util.List;
 import java.util.Vector;
 
 /**
- *
+ *Clase OrientalDish
  * @author SANTIAGO MUÑOZ, JUAN LOPEZ
  */
 public class OrientalDish extends Dish {
 
     /**
-     * Variable  de tipo Product.
+     * Variable de tipo Product.
      */
     private Product base;
     /**
@@ -21,7 +21,7 @@ public class OrientalDish extends Dish {
      */
     private List<Product> myOptions;
     /**
-     * Variable  de tipo Size.
+     * Variable de tipo Size.
      */
     private Size size;
 
