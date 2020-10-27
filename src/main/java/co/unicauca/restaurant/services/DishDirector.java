@@ -2,34 +2,48 @@ package co.unicauca.restaurant.services;
 
 import co.unicauca.restaurant.domain.Dish;
 
-
 /**
  *
- * @author Julio Hurtado, Libardo Pantoja
- * 
- */ 
-
+ * @author SANTIAGO MUÑOZ, JUAN LOPEZ
+ */
 public class DishDirector {
-  
-  private DishBuilder builder;
 
-  public DishDirector(DishBuilder builder) {
-    this.builder = builder;
-  }
-  public DishDirector(){
-  }
+    /**
+     * Objeto de tipo DishBuilder.
+     */
+    private DishBuilder builder;
 
-  public Dish getDish() {
-    return builder.getDish();
-  }
-
-  public void create() {
-    boolean masPartes = true;
-    builder.init();
-    builder.setCore();
-    while(masPartes){
-        masPartes = builder.addPart();
+    /**
+     * Constructor parametrizado.
+     *
+     * @param builder
+     */
+    public DishDirector(DishBuilder builder) {
+        this.builder = builder;
     }
-    builder.setSize();
-}
+
+    /**
+     * Constructor por defecto.
+     */
+    public DishDirector() {
+    }
+
+    //Getters
+    public Dish getDish() {
+        return builder.getDish();
+    }
+
+    /**
+     * Metodo encargado de realizar los respectivos llamados a funciones para
+     * crear un plato.
+     */
+    public void create() {
+        boolean masPartes = true;
+        builder.init();
+        builder.setCore();
+        while (masPartes) {
+            masPartes = builder.addPart();
+        }
+        builder.setSize();
+    }
 }

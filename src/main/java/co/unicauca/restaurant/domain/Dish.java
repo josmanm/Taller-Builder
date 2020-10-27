@@ -1,24 +1,21 @@
-
 package co.unicauca.restaurant.domain;
 
 /**
- *
- * @author ahurtado
+ *CLASE DISH.
+ * @author SANTIAGO MUÑOZ, JUAN LOPEZ
  */
 public class Dish {
-    protected double price;
-    
 
     /**
-     * @return the price
+     * variable de tipo precio.
      */
+    protected double price;
+
+    //Setters and getters
     public double getPrice() {
         return price;
     }
 
-    /**
-     * @param price the price to set
-     */
     public void setPrice(double price) {
         this.price = price;
     }

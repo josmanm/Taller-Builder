@@ -1,10 +1,10 @@
-
 package co.unicauca.restaurant.domain;
 
 /**
+ * CLASE SIZE (ENUM)
  *
- * @author ahurtado
+ * @author SANTIAGO MUÑOZ, JUAN LOPEZ
  */
 public enum Size {
-    FAMILY, DOUBLE , PERSONAL
+    FAMILY, DOUBLE, PERSONAL
 }

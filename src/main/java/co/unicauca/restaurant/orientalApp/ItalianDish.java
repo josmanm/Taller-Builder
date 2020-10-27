@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package co.unicauca.restaurant.orientalApp;
 
 import co.unicauca.restaurant.domain.Dish;
@@ -12,64 +7,77 @@ import java.util.List;
 import java.util.Vector;
 
 /**
+ * CLASE ItalianDish.
  *
- * @author SANTIAGO MUÑOZ
+ * @author SANTIAGO MUÑOZ, JUAN LOPEZ
  */
-public class ItalianDish extends Dish{
+public class ItalianDish extends Dish {
+
+    /**
+     * variable de tipo product.
+     */
     private Product base;
+    /**
+     * Lista de tipo producto.
+     */
     private List<Product> myOptions;
+    /**
+     * variable de tipo Size.
+     */
     private Size size;
-    
-     ItalianDish(double p) {
+
+    /**
+     * Constructor parametrizado.
+     *
+     * @param p
+     */
+    ItalianDish(double p) {
         this.price = p;
         myOptions = new Vector<>();
     }
 
-    void setBase(Product base) {
-        this.base = base; 
-    }
-
+    /**
+     * Metodo para añadir una opcion al plato.
+     *
+     * @param option
+     */
     void addOption(Product option) {
         getMyOptions().add(option);
     }
 
-    /**
-     * @return the base
-     */
+    //SETTERS AND GETTERS.
+    void setBase(Product base) {
+        this.base = base;
+    }
+
     public Product getBase() {
         return base;
     }
 
-    /**
-     * @return the myOptions
-     */
     public List<Product> getMyOptions() {
         return myOptions;
     }
 
-    /**
-     * @return the size
-     */
     public Size getSize() {
         return size;
     }
 
-    /**
-     * @param size the size to set
-     */
     public void setSize(Size size) {
         this.size = size;
     }
-    
-    public double getPrice(){
+
+    public double getPrice() {
         price = base.getPrice();
-        for(Product each: myOptions){
+        for (Product each : myOptions) {
             price = price + each.getPrice();
         }
-        if(size==Size.DOUBLE) price = 1.8*price;
-        if(size==Size.FAMILY) price = 3*price;
+        if (size == Size.DOUBLE) {
+            price = 1.8 * price;
+        }
+        if (size == Size.FAMILY) {
+            price = 3 * price;
+        }
         return price;
     }
-  
-    
+
 }
